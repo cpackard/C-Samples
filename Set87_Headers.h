@@ -1,5 +1,5 @@
-#ifndef AMAZON_INTERVIEW_SET87_HEADERS
-#define AMAZON_INTERVIEW_SET87_HEADERS
+#ifndef SET87_HEADERS
+#define SET87_HEADERS
 
 typedef struct iNode { //misleading name, I know
     int data;

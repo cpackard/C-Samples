@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "Amazon_Interview_Set87_Headers.h"
+#include "Set87_Headers.h"
 
 void problem1();
 int * findNextGreater( int *input, int length);
