@@ -3,19 +3,19 @@
 #include "LinkedList.h"
 
 LinkedList * findMthElementFromEnd (LinkedList *, int);
-void problem1 ();
+void findMthElementFromEndTest ();
 
 LinkedList * BuildFromEnd (int);
-void problem2a ();
+void buildFromEndTest ();
 
 LinkedList * BuildFromEndWithDummy (int);
-void problem2b ();
+void buildFromEndWithDummyTest ();
 
 LinkedList * BuildFromEndWithLocalRef (int);
-void problem2c ();
+void buildFromEndWithLocalRefTest ();
 
 int Count (LinkedList *, int);
-void problem3 ();
+void countTest ();
 
 int GetNth (LinkedList *, int);
 void GetNthTest ();
@@ -66,13 +66,13 @@ void recursiveReverse (LinkedList**);
 void recursiveReverseTest ();
 
 int main () {
-  problem1();
+  findMthElementFromEndTest();
 
-  problem2a();
-  problem2b();    
-  problem2c();
+  buildFromEndTest();
+  buildFromEndWithDummyTest();    
+  buildFromEndWithLocalRefTest();
 
-  problem3();
+  countTest();
 
   GetNthTest();
 
@@ -109,6 +109,10 @@ int main () {
   return 0;
 }
 
+/*
+Write a findMth function that takes a linked list and an integer index and 
+returns the data value stored in the node at that index position.
+*/
 LinkedList * findMthElementFromEnd (LinkedList *list, int m) {
   LinkedList *currentNode = list;
   int i;
@@ -130,7 +134,7 @@ LinkedList * findMthElementFromEnd (LinkedList *list, int m) {
   return mthNode;
 }
 
-void problem1 () {
+void findMthFromEndTest () {
 LinkedList *list = 0;
   int i;
   for( i = 8; i >= 0; i-- ) {
@@ -139,7 +143,7 @@ LinkedList *list = 0;
   }
 
   LinkedList *temp = list;
-  printf( "----Problem #1----\n\n**** Input List ****\n\t" );
+  printf( "----findMthFromEndTest----\n\n**** Input List ****\n\t" );
   printList( temp );
   printf( "\n" );
 
@@ -178,9 +182,9 @@ LinkedList * buildFromEnd (int n) {
   return head;
 }
 
-void problem2a () {
+void buildFromEndTest () {
   int n = 6;
-  printf( "----Problem #2a----\n\n**** Output List ****\n\t" );
+  printf( "----buildFromEndTest----\n\n**** Output List ****\n\t" );
   printList( buildFromEnd( n ) );
   printf( "\n" );
 }
@@ -204,9 +208,9 @@ LinkedList * buildFromEndWithDummy (int n) {
   return dummy.next;
 }
 
-void problem2b () {
+void buidFromEndWithDummyTest () {
   int n = 6;
-  printf( "----Problem #2b----\n\n**** Output List ****\n\t" );
+  printf( "----buildFromEndWithDummy----\n\n**** Output List ****\n\t" );
   printList( buildFromEndWithDummy( n ) );
   printf( "\n" );
 }
@@ -228,9 +232,9 @@ LinkedList * buildFromEndWithLocalRef (int n) {
   return head;
 }
 
-void problem2c () {
+void buildFromEndWithLocalRefTest () {
   int n = 6;
-  printf( "----Problem #2c----\n\n**** Output List ****\n\t" );
+  printf( "----buildFromEndWithLocalRefTest----\n\n**** Output List ****\n\t" );
   printList( buildFromEndWithLocalRef( n ) );
   printf( "\n" );
 }
@@ -254,8 +258,8 @@ int Count (LinkedList *list, int searchData) {
   return count;
 }
 
-void problem3() {
-  printf( "----Problem #3----\n\n****Input List****\n\t" );
+void countTest() {
+  printf( "----countTest----\n\n****Input List****\n\t" );
   LinkedList *list = buildOneTwoThree();
   int searchData = 2;
 
