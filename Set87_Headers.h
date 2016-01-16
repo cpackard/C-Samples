@@ -1,7 +1,7 @@
 #ifndef SET87_HEADERS
 #define SET87_HEADERS
 
-typedef struct iNode { //misleading name, I know
+typedef struct iNode { 
     int data;
     struct iNode *next;
 } iNode;
